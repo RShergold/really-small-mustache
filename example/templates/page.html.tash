@@ -1,0 +1,19 @@
+<div id="page">
+
+	<h1>{{name}}</h1>
+	{{#demo}}
+	<div class="demo">
+		<pre>{{{demo}}}</pre>
+	</div>
+	{{/demo}}
+	
+	{{{content}}}
+	
+	{{#js_demo}}
+		{{>js/on_page.html}}
+	{{/js_demo}}
+
+	{{#links}}
+		{{>_links.html}}
+	{{/links}}
+</div>

@@ -1,0 +1,12 @@
+
+<!-- html_in_js_string.html.tash -->
+
+This html is escaped to be stored in a javascript string.<br>
+
+i can keep new lines<br>
+
+and <span style="color:red">tags</span> without worrying
+about escaping them in my code!<br><br>
+
+{{>js/sub_file.html}}
+

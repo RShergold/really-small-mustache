@@ -1,0 +1,14 @@
+
+<!-- on_page.html.tash -->
+<input type="button" value="Click me!" onclick="append()">
+<div id="append_me">
+  Click the button to append the <b>html_in_js_string.html</b> template to this div!!
+  <br><br>
+</div>
+<script>
+function append(){
+	document.getElementById('append_me').insertAdjacentHTML('beforeend', {{1>js/html_in_js_string.html}});
+}
+</script>
+
+

@@ -13,7 +13,7 @@ class Tash{
 	}
 	public function render_text($tmplate,$params){
 		return preg_replace_callback(
-			'/{{(\w+)}}|{{{(\w+)}}}|{{#(\w+)}}(.+?){{\/\3}}|{{\d?\>([\w\.]+)}}/s',
+			'/{{(\w+)}}|{{{(\w+)}}}|{{#(\w+)}}(.+?){{\/\3}}|{{\d?\>([\w\.\/]+)}}/s',
 			function($m) use($params) {
 				if (isset($m[1]) && isset($params[$m[1]])) {
 					# {{value}}

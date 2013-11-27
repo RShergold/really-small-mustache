@@ -1,0 +1,52 @@
+{
+	"pages":{
+		"Home":{
+			"name":"Home",
+			"content":"This is my really small implementation of the mustache templating system. It is based on a GitHub gist by yhirose. As it stands this version supports: <br><br>Variables:<br>{{variable_name}}<br><br>non-escaped Variables:<br> {{{variable_name}}}<br><br>Sections: <br>{{#array_of_variables}}{{variable_n}}{{\\array_of_variables}}<br><br>Non-False Values:<br>{{# variable_name }}{{ variable_name }}{{\\variable_name}}<br><br>Partials:<br>{{>file_name.html}}<br><br>And my own slight tweak<br>Escaped Partials:<br>{{1>file_name.html}}<br><br><br>For more info check out the links below.",
+			"links":[
+				{
+					"url":"https://gist.github.com/yhirose/3195927",
+					"desc":"The original github gist this version is based on",
+					"title":"yhirose's github gist"
+				},
+				{
+					"url":"http://mustache.github.io/",
+					"desc":"Take a look at the mustache homepage to see a little more how the standard works",
+					"title":"The Mustache homepage"
+				}
+			]
+		},
+		"Escaped Partials":{
+			"name":"Escaped Partials",
+			"content":"The escaped partials tag:<h4>{{1>file_name.html}}</h4> Allows you to render the partial but then escape it for use in a javascript string. This is useful if you wish to use Rails style ajax. This is were the ajax response is a piece of javascript that may wish to append a previously defined html partial. Try it out below!<br><br><br>",
+			"js_demo":"true"
+		},
+		"Limitations":{
+			"name":"Limitations",
+			"content":"This is a really small imlimentaion of mustache. I built it as i only needed to use the features implemented (and to add my own). The Class will only accept an array of strings as variables, so no call backs allowed. It is also set up to only look for partials in the directory you define when you create the class.<br><br>There are a few other things not supported, such as: <ul><li>Inverted Sections</li><li>Comments</li><li>Set Delimiter</li></ul>See below for more details<br><br><br>",
+			"links":[
+				{
+					"url":"http://mustache.github.io/mustache.5.html",
+					"desc":"Take a look at the advanced options (not supported here) in the current mustache spec",
+					"title":"The Mustache spec"
+				}
+			]
+		},
+		"About":{
+			"name":"About",
+			"content":"Really Small Mustache was written by Remi Shergold and is published with absolutely no licence. So take it, play with it and pass it on as you please with no restrictions whatsoever.",
+			"links":[
+				{
+					"url":"https://remi-shergold.co.uk",
+					"desc":"My tiny corner of the web",
+					"title":"remi-shergold.co.uk"
+				},
+				{
+					"url":"http://github.com/RShergold",
+					"desc":"My GitHub page",
+					"title":"github.com/RShergold"
+				}
+			]
+		}
+	}
+}

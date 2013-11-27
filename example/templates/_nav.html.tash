@@ -1,0 +1,12 @@
+<div id="nav_top">
+	<a href="/" id="home_link">
+		Really small mustache
+	</a>
+	<ul>
+		{{#pages}}
+		<li>
+			<a href="/?page={{name}}" {{#on_page}}class="selected"{{/on_page}}>{{name}}</a>
+		</li>		
+		{{/pages}}
+	</ul>
+</div>

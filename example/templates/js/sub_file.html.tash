@@ -1,0 +1,5 @@
+
+	<!-- html_in_js_string.html.tash -->
+	<div class="well">
+		I can even have sub partials in the escaped partial!
+	</div>

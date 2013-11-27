@@ -1,0 +1,6 @@
+<ul id="links">
+	<li>
+		<a href="{{{url}}}">{{title}}</a>
+		<br>{{desc}}
+	</li>
+</ul>
