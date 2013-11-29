@@ -13,7 +13,7 @@ class Tash{
 	}
 	public function render_text($tmplate,$params){
 		return preg_replace_callback(
-			'/{{(\w+)}}|{{{(\w+)}}}|{{#(\w+)}}(.+?){{\/\3}}|{{\d?\>([\w\.\/]+)}}/s',
+			'/{{([\w\?]+)}}|{{{([\w\?]+)}}}|{{#([\w\?]+)}}(.+?){{\/\3}}|{{\d?\> ([\w\.\/]+)}}/s',
 			function($m) use($params) {
 				if (isset($m[1]) && isset($params[$m[1]])) {
 					# {{value}}
@@ -42,8 +42,15 @@ class Tash{
 	private function loop_section($tmplate,$section_key,$params){
 		$rtn = '';
 		foreach ($params[$section_key] as $section){
-			$section_params = array_merge($params,$section);
-			$rtn .= $this->render_text($tmplate,$section_params);
+			if (is_array($section)){
+				# loop list
+				$section_params = array_merge($params,$section);
+				$rtn .= $this->render_text($tmplate,$section_params);
+			}else{
+				# non false non list
+				$section_params = array_merge($params,$params[$section_key]);
+				return $this->render_text($tmplate,$section_params);
+			}
 		}
 		return $rtn;
 	}

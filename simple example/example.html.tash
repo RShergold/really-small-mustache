@@ -1,0 +1,94 @@
+
+	<h1>
+		A simple Tash demo
+	</h1>
+	<p>
+		Based on the examples in the Mustache(5) manual
+	</p>
+	
+	<h2>
+		SYNOPSIS
+	</h2>
+	<pre>
+	Hello {{name}}
+	You have just won ${{value}}!
+	{{#in_ca}}
+	Well, ${{taxed_value}}, after taxes.
+	{{/in_ca}}
+	</pre>
+	
+	<h2>
+		Variables
+	</h2>
+	<pre>
+	* {{name}}
+	* {{age}}
+	* {{company}}
+	* {{{company}}}
+	</pre>
+	
+	<h2>
+		Sections
+	</h2>
+	<pre>
+		Shown.
+		{{#nothin}}
+		  Never shown!
+		{{/nothin}}
+	</pre>
+	
+	<h2>
+		Non-Empty Lists
+	</h2>
+	<pre>
+		{{#repo}}
+	  	<b>{{name}}</b>
+		{{/repo}}
+	</pre>
+	
+	<h2>
+		Lambdas
+	</h2>
+	<big style="color:red">
+		Not supported!
+	</big>
+	
+	<h2>
+		Non-False Values
+	</h2>
+	<pre>
+		{{#person?}}
+	  	Hi {{name}}!
+		{{/person?}}
+	</pre>
+	
+	<h2>
+		Inverted Sections
+	</h2>
+	<big style="color:red">
+		Not supported!
+	</big>
+	
+	<h2>
+		Comments
+	</h2>
+	<big style="color:red">
+		Not supported!
+	</big>
+	
+	<h2>
+		Partials
+	</h2>
+	<pre>
+		<h2>Names</h2>
+		{{#names}}
+		  {{> user}}
+		{{/names}}
+	</pre>
+	
+	<h2>
+		Comments
+	</h2>
+	<big style="color:red">
+		Set Delimiter
+	</big>
