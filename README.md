@@ -16,8 +16,9 @@ This is my really small php implementation of the mustache templating system. It
 {{# variable_name }}{{ variable_name }}{{\variable_name}}
 
 #####Partials:
-{{>file_name.html}}
+{{> file_name.html}}
 
 And my own slight tweak
 #####Escaped Partials:
-{{1>file_name.html}}
+{{1> file_name.html}}
+Escaped for use in a js string
