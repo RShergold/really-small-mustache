@@ -2,9 +2,9 @@
 <head>
 	<title>Really small mustache</title>
 	<style>
-		{{>_style.css}}
+		{{> _style.css}}
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		{{>_nav.html}}
+		{{> _nav.html}}

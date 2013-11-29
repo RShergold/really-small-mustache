@@ -8,5 +8,5 @@ i can keep new lines<br>
 and <span style="color:red">tags</span> without worrying
 about escaping them in my code!<br><br>
 
-{{>js/sub_file.html}}
+{{> js/sub_file.html}}
 

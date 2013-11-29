@@ -7,7 +7,7 @@
 </div>
 <script>
 function append(){
-	document.getElementById('append_me').insertAdjacentHTML('beforeend', {{1>js/html_in_js_string.html}});
+	document.getElementById('append_me').insertAdjacentHTML('beforeend', {{1> js/html_in_js_string.html}});
 }
 </script>
 

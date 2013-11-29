@@ -80,15 +80,15 @@
 		Partials
 	</h2>
 	<pre>
-		<h2>Names</h2>
+		<h4>Names</h4>
 		{{#names}}
 		  {{> user}}
 		{{/names}}
 	</pre>
 	
 	<h2>
-		Comments
+		Set Delimiter
 	</h2>
 	<big style="color:red">
-		Set Delimiter
+		Not supported!
 	</big>
