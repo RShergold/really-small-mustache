@@ -1,7 +1,7 @@
 <?php
 
 class Tash{
-	public $template_dir,
+	private $template_dir,
 		$template_cache = array();
 	
 	public function __construct($template_dir){
