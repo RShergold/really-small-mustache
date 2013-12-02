@@ -9,10 +9,10 @@ class Tash{
 	}
 	public function render_file($template_name,$params,$escape_type = false){
 		if (array_key_exists($template_name,$this->template_cache)){
-			$tmplate = $this->template_cache['$template_name'];
+			$tmplate = $this->template_cache[$template_name];
 		} else{
 			$tmplate = file_get_contents($this->template_dir.$template_name.'.tash');
-			$this->template_cache['$template_name'] = $tmplate;
+			$this->template_cache[$template_name] = $tmplate;
 		}
 		return $this->escape_file($this->render_text($tmplate,$params),$escape_type);
 	}
