@@ -1,14 +1,19 @@
 <?php
 
 class Tash{
-	public $template_dir;
+	public $template_dir,
+		$template_cache = array();
 	
 	public function __construct($template_dir){
 		$this->template_dir = $template_dir;
 	}
-	
 	public function render_file($template_name,$params,$escape_type = false){
-		$tmplate = file_get_contents($this->template_dir.$template_name.'.tash');
+		if (array_key_exists($template_name,$this->template_cache)){
+			$tmplate = $this->template_cache['$template_name'];
+		} else{
+			$tmplate = file_get_contents($this->template_dir.$template_name.'.tash');
+			$this->template_cache['$template_name'] = $tmplate;
+		}
 		return $this->escape_file($this->render_text($tmplate,$params),$escape_type);
 	}
 	public function render_text($tmplate,$params){
@@ -38,7 +43,6 @@ class Tash{
 			},
 			$tmplate);
 	}
-	
 	private function loop_section($tmplate,$section_key,$params){
 		$rtn = '';
 		foreach ($params[$section_key] as $section){
@@ -54,14 +58,12 @@ class Tash{
 		}
 		return $rtn;
 	}
-	
 	private function escape_file($file_text,$escape_type){
 		if ($escape_type==1){
 			return json_encode($file_text);
 		}
 		return $file_text;
 	}
-	
 }
 
 ?>
