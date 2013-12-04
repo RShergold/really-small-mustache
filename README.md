@@ -21,4 +21,4 @@ This is my really small php implementation of the mustache templating system. It
 And my own slight tweak
 #####Escaped Partials:
 {{1> file_name.html}}
-Escaped for use in a js string
+Escaped for use in a JS string
